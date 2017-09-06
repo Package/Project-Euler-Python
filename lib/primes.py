@@ -33,3 +33,13 @@ def is_prime_cached(x):
 
     prime_map[x] = True
     return True
+
+
+def gen_primes(max_range):
+    primes = [2]
+
+    for x in range(3, max_range, 2):
+        if is_prime(x):
+            primes.append(x)
+
+    return primes
