@@ -4,7 +4,7 @@ def largest_product():
 
     for x in range(0, GRID_WIDTH):
         for y in range(0, GRID_HEIGHT):
-            h = check_horizonal(x, y)
+            h = check_horizontal(x, y)
             v = check_vertical(x, y)
             d = check_diagonal(x, y)
             max_iter = max([h, v, d])
@@ -48,7 +48,7 @@ def check_diagonal(x, y):
 
 
 # Horizontal check across
-def check_horizonal(x, y):
+def check_horizontal(x, y):
     if y + 4 > GRID_WIDTH:
         return 0
 
