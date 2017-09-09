@@ -14,6 +14,19 @@ def is_palindrome(num):
     return str(num) == str(num)[::-1]
 
 
+def is_pandigital(number, n):
+    number = str(number)
+
+    if len(number) is not n:
+        return False
+
+    for x in range(1, n + 1):
+        if number.count(str(x)) is not 1:
+            return False
+
+    return True
+
+
 def get_permutations(number, as_int=False):
     if as_int:
         return [int(''.join(x)) for x in permutations(str(number))]
