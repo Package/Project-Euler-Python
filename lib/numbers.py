@@ -1,6 +1,32 @@
 from math import sqrt
 
 
+def is_bouncy(n):
+    last_num = False
+    increasing = True
+    decreasing = True
+
+    for c in str(n):
+        int_c = int(c)
+
+        if last_num is False:
+            last_num = int_c
+            continue
+
+        if int_c < last_num:
+            increasing = False
+
+        if int_c > last_num:
+            decreasing = False
+
+        if not increasing and not decreasing:
+            return True
+
+        last_num = int_c
+
+    return False
+
+
 def is_composite(num):
     if num < 3:
         return False
