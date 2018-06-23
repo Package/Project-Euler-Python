@@ -14,7 +14,6 @@ def lattice_path(x, y):
     if grid_map[x][y] is not None:
         return grid_map[x][y]
 
-    
     grid_map[x][y] = lattice_path(x + 1, y) + lattice_path(x, y + 1)
     return grid_map[x][y]
     
@@ -26,6 +25,5 @@ def in_bounds(x, y):
         return False
     return True
 
-print(lattice_path(0, 0))
 
-        
+print(lattice_path(0, 0))
